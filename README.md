@@ -1,6 +1,6 @@
 # Neural Network Library
 
-A modular implementation of various neural network architectures from scratch using PyTorch tensors. This project focuses on demonstrating the underlying mechanics of each architecture with an emphasis on educational clarity.
+A modular implementation of various neural network architectures from scratch. This project focuses on demonstrating the underlying mechanics of each architecture with an emphasis on educational clarity.
 
 ## Overview
 
