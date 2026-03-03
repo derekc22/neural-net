@@ -371,18 +371,18 @@ class Network:
             elif self.model_type == "transformer":
                 
                 if layer.component == "encoder":
-                    layer.WQKV -= self.learn_reate * layer.WQKV.grad
+                    layer.WQKV -= self.learn_rate * layer.WQKV.grad
                     
                 if layer.component == "decoder":
-                    layer.WQKV_masked -= self.learn_reate * layer.WQKV_masked.grad
-                    layer.WO_masked -= self.learn_reate * layer.WO_masked.grad
-                    layer.WQ -= self.learn_reate * layer.WQ.grad
-                    layer.WKV -= self.learn_reate * layer.WKV.grad
+                    layer.WQKV_masked -= self.learn_rate * layer.WQKV_masked.grad
+                    layer.WO_masked -= self.learn_rate * layer.WO_masked.grad
+                    layer.WQ -= self.learn_rate * layer.WQ.grad
+                    layer.WKV -= self.learn_rate * layer.WKV.grad
                     
                     if layer.type == "output":
                         layer.linear.grad -= self.learn_rate * layer.linear.grad
                         
-                layer.WO -= self.learn_reate * layer.WO.grad
+                layer.WO -= self.learn_rate * layer.WO.grad
     
     
     def adam(self, layer_index, gt, param_type, *args):
