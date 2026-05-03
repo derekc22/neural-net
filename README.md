@@ -6,8 +6,8 @@ Neural network models implemented from scratch in Python
 
 - Clone the repository
   ```bash
-  git clone <repository-url>
-  cd neural-network-library
+  git clone git@github.com:derekc22/neural-net.git
+  cd neural-net
   ```
 
 - Install dependencies
